@@ -16,9 +16,17 @@ def format_attributes_names(
     """
     attributes_formatted: list[str] = []
     for attr in attributes:
-        attr = attr.replace("_", "")
-        if classname in attr:
-            attr = attr.replace(classname, "")
+        # remove leading underscores that mark protected or private members
+        attr = attr.lstrip("_")
+
+        # handle Python name mangling for private attributes by removing the
+        # class name if it is present at the start of the attribute
+        if classname and attr.startswith(classname):
+            attr = attr[len(classname) :]
+            # after removing the class name there may still be a leading
+            # underscore left from the mangling
+            attr = attr.lstrip("_")
+
         attributes_formatted.append(attr)
 
     return attributes_formatted
