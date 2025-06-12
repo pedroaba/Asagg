@@ -182,7 +182,7 @@ class Asagg(ABC):
     @staticmethod
     def __default_function_setter(self: object, attr: str, value: Any) -> None:
         """
-        This method is responsable to set the value on object
+        This method is responsible to set the value on object
 
         Parameters:
             self: Object that you want to create a set function
@@ -190,6 +190,7 @@ class Asagg(ABC):
             value: value that you want to set in attribute
 
         Returns:
+            None
 
         """
         type_to_compare = type(getattr(self, attr))
@@ -205,7 +206,7 @@ class Asagg(ABC):
     @staticmethod
     def __default_function_getter(self: Any, attr: str) -> Any:
         """
-        This method is responsable to get the value on object
+        This method is responsible to get the value on object
 
         Parameters:
             self: Object that you want to create a set function
