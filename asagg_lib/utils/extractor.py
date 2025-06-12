@@ -42,7 +42,7 @@ class Extractor(ABC):
         """
         attributes = []
         for member in getmembers(_class):
-            if "__init__" in member:
+            if member[0] == "__init__":
                 attributes = member[1].__code__.co_names
                 break
 
