@@ -35,7 +35,5 @@ class TestAsaggSetter(unittest.TestCase):
         self.assertEqual(self.expected_values["_foo_after"], self.square._foo)
 
     def test_it_should_not_be_able_to_set_a_value_to_new_setter_property(self):
-        try:
+        with self.assertRaises(TypeError):
             self.square.edge = "Should be faield"
-        except Exception as e:
-            self.assertIsInstance(e, TypeError)
