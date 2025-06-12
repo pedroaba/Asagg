@@ -1,14 +1,17 @@
 def format_attributes_names(
     attributes: list[str], classname: str = ""
 ) -> list[str]:
-    """
-    Format attributes to make a new attribute and remove classname if attribute name contains it
+    """Format attribute names by cleaning mangled prefixes.
 
     Parameters:
-         attributes: list of all attribute that you want format
-         classname: name of class that you retrive the attributes
+        attributes: list[str]
+            List of attribute names to format.
+        classname: str
+            Optional class name used when removing mangled prefixes.
+
     Returns:
-        return all attributes formatted to make new public attributes
+        list[str]:
+            A list containing the formatted attribute names.
 
     Examples:
         >>> format_attributes_names(["_foo", "_Square_foo"], "Square")
