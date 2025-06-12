@@ -5,7 +5,7 @@
 # Asagg
 
 The **Asagg** library **(Auto Setter And Getter Generator)** is a library inspired by another
-library that is in the [Java](https://www.java.com) environment, which is the [Lombock](https://projectlombok.org/) library, this library
+library that is in the [Java](https://www.java.com) environment, which is the [Lombok](https://projectlombok.org/) library, this library
 aims to automate the generation of access methods to private attributes, 
 automatically generating Getters and Setters Among other things.
 
@@ -27,7 +27,7 @@ dependency manager of your choice, such as [Poetry](https://python-poetry.org/) 
 ```
 ## Usage
 
-Following the same line of operation as Lombock, to be able to use the library, just 
+Following the same line of operation as Lombok, to be able to use the library, just 
 use a decorator and the magic will happen. The decorators are divided into three functions 
 where each one has a functionality and one has the functionality of the other two, 
 being their combination.
