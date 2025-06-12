@@ -36,7 +36,7 @@ class Asagg(ABC):
 
     @abstractmethod
     def __init__(self):
-        """Absatract method"""
+        """Abstract method"""
         pass
 
     @staticmethod
@@ -182,7 +182,7 @@ class Asagg(ABC):
     @staticmethod
     def __default_function_setter(self: object, attr: str, value: Any) -> None:
         """
-        This method is responsable to set the value on object
+        This method is responsible for setting the value on the object
 
         Parameters:
             self: Object that you want to create a set function
@@ -205,7 +205,7 @@ class Asagg(ABC):
     @staticmethod
     def __default_function_getter(self: Any, attr: str) -> Any:
         """
-        This method is responsable to get the value on object
+        This method is responsible for getting the value from the object
 
         Parameters:
             self: Object that you want to create a set function
